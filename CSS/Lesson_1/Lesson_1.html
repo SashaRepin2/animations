@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+
+    <style>
+        .LearnCssAnimation {
+            transform-origin: 50% 50% 0px;
+            animation-name: ImgRotate3dAnimation;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes ImgRotate3dAnimation {
+            50% {
+                transform: rotate3d(2, 0, 1, 180deg);
+            }
+
+            100% {
+                transform: rotate3d((2, 0, 1, 360deg));
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div>
+        <svg width="900" height='650'>
+            <image id='testImg' href='../images/CssAnimationTestImage.jpg' height='400' width='400' x='190}
+                y=' 140} class='LearnCssAnimation'></image>
+        </svg>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rubikCube {
+            position: relative;
+            top: 130px;
+            left: 250px;
+            width: 400px;
+            height: 400px;
+
+            transform-style: preserve-3d;
+        }
+
+        .rubikCube div {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            opacity: 0.9;
+        }
+
+        .face1green {
+            transform: rotateX(0deg) translateZ(200px);
+            background-color: red;
+        }
+
+        .face2blue {
+            transform: rotateX(-180deg) translateZ(200px);
+        }
+
+        .face3yellow {
+            transform: rotateY(90deg) translateZ(200px);
+        }
+
+        .face4red {
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+
+        .face5white {
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+
+        .face6orange {
+            transform: rotateX(90deg) translateZ(200px);
+        }
+    </style>
+</head>
+
+<body>
+    <script async src="rubikKeyBinding.js"></script>
+    <div class="rubikCube">
+        <div class="face1green">
+            <image src="../images/1.jpg" />
+        </div>
+        <div class="face2blue">
+            <image src="../images/2.jpg" />
+        </div>
+        <div class="face3yellow">
+            <image src="../images/3.jpg" />
+        </div>
+        <div class="face4red">
+            <image src="../images/4.jpg" />
+        </div>
+        <div class="face5white">
+            <image src="../images/5.jpg" />
+        </div>
+        <div class="face6orange">
+            <image src="../images/6.jpg" />
+        </div>
+    </div>
+
+</body>
+
+</html>

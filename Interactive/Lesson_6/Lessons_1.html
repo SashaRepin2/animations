@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script async src="./WAAPI_example.js"></script>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        button {
+            color: #fff;
+            background-color: steelblue;
+            border-radius: 5px;
+            border: 0;
+            cursor: pointer;
+            font-weight: bold;
+            line-height: 1;
+            padding: 9px 10px;
+        }
+
+        .crc {
+            transform-origin: 50% 50% 0px;
+        }
+
+        .options {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="options">
+        <button id="pause">
+            pause
+        </button>
+        <button id="play">
+            play
+        </button>
+        <button id="reverse">
+            reverse
+        </button>
+        <button id="cancel">
+            cancel
+        </button>
+    </div>
+
+    <svg width="900" height="600" style="stroke: cyan; fill:none;">
+        <g id="cr1_2" class="crc">
+            <circle cx="450" cy="300" r="28" stroke-width="3" fill="red">
+            </circle>
+
+            <circle id="cr2" cx="450" cy="300" r="280" stroke-width="4" stroke-dasharray="0 1800">
+                <animate attributeName="stroke-dasharray" begin="1s" dur="7s"
+                    values="0 1114; 75 500; 150 135; 24 24; 1114 0" keyTimes="0; 0.1; 0.3; 0.5; 1" fill="freeze">
+                </animate>
+            </circle>
+        </g>
+
+        <circle id="cr3" cx="450" cy="320" r="280" stroke="yellow" stroke-width="3" stroke-dasharray="0 1800"
+            class="crc">
+            <animate attributeName="stroke-dasharray" begin="5s" dur="12s"
+                values="0 1114; 75 500; 150 135; 24 24; 1114 0" keyTimes="0; 0.1; 0.3; 0.5; 1" fill="freeze">
+            </animate>
+        </circle>
+    </svg>
+</body>
+
+</html>

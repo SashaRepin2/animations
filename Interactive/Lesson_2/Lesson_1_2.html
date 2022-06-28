@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <svg width="900" height="600">
+        <g tranfrom="translate(450)">
+            <g id="group1" tranform="scale(1 1)">
+                <svg x="0" y="100" width="600" height="600">
+                    <image xlink:href="../images/image.jpg" />
+                </svg>
+            </g>
+        </g>
+    </svg>
+    <script>
+        let group = document.getElementById('group1');
+        let scaleExpression = /.*\((\d*) \d*\)/g.exec(group.getAttribute('tranform'));
+        let newScaleX = parseInt(scaleExpression[1]);
+        let cursorPos = 0;
+        window.addEventListener('mousemove', (e) => {
+            group.setAttribute('transform', `scale(${newScaleX} 1)`);
+            if (cursorPos < e.pageX) {
+                newScaleX -= 0.05
+            } else {
+                newScaleX += 0.05
+            }
+            cursorPos = e.pageX
+        }, false)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <svg width="900" height="650">
+        <image xlink:href="../images/SeaHorseOriginal.jpg" width="100%" height="100%" />
+
+        <clipPath id="XrayMask">
+            <circle id="mask-circle" cx="50%" cy="50%" r="10%" />
+        </clipPath>
+
+        <image clip-path="url(#XrayMask)" xlink:href="../images/SeaHorseXray.jpg" width="100%" height="100%" />
+
+    </svg>
+    <script>
+        let animationsObj = document.getElementById('mask-circle');
+
+        window.addEventListener('mousemove', e => {
+            animationsObj.setAttribute('cx', e.pageX);
+            animationsObj.setAttribute('cy', e.pageY);
+
+        }, false)
+    </script>
+</body>
+
+</html>

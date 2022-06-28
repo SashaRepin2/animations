@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #field {
+            width: 900px;
+            height: 600px;
+            position: relative;
+            background-color: #3994a1;
+        }
+
+        #rect {
+            width: 77px;
+            height: 77px;
+            position: absolute;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p> <button onclick="jsAnimationCssStyle()">Start Anim</button></p>
+    <div id="field">
+        <div id="rect"></div>
+    </div>
+    <script>
+        let isStartAnim = false;
+
+        function jsAnimationCssStyle() {
+
+            if (isStartAnim)
+                return;
+
+            let animationObj = document.getElementById('rect');
+            let position = 0;
+            let timing = setInterval(currentAnimationFrame, 5);
+            isStartAnim = true;
+
+            function currentAnimationFrame() {
+                if (position === 523) {
+                    clearInterval(timing)
+                    isStartAnim = false;
+                } else {
+                    position++;
+                    animationObj.style.top = `${position}px`
+                    animationObj.style.left = `${position}px`
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

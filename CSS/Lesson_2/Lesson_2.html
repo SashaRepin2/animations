@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .aquarium {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            top: 130px;
+            left: 250px;
+            transform-style: preserve-3d;
+            animation: aquaCube3dRotation 10s linear 1s infinite normal forwards;
+        }
+
+        /* ------------- FULL PROPERTIES --------------------
+            animation-name: aquaCube3dRotation;
+            animation-delay: 1s;
+            animation-duration: 20s;
+             animation-direction: reverse;
+           animation-fill-mode: forwards;
+            animation-timing-function: ease;
+
+            ------------- SHORTHAND PROPERTY ------------------*/
+
+        @keyframes aquaCube3dRotation {
+            from {
+                transform: rotate3d(1, 1, 1, 0);
+            }
+
+            to {
+                transform: rotate3d(1, 1, 1, 360deg);
+            }
+        }
+
+        /* SIDE OF CUBE */
+        .aquarium div {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            opacity: 0.8;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* // FRONT SIDE OF CUBE */
+        .face1 {
+            transform: rotateX(0deg) translateZ(200px);
+            background-color: red;
+        }
+
+        /* // BACK SIDE OF CUBE */
+        .face2 {
+            transform: rotateX(-180deg) translateZ(200px);
+        }
+
+        /* // RIGTH SIDE OF CUBUE */
+        .face3 {
+            transform: rotateY(90deg) translateZ(200px);
+        }
+
+        /* // BOTTOM SIDE OF CUBE */
+        .face4 {
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+
+        /* // LEFT SIDE OF CUBE */
+        .face5 {
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+
+        /* // TOP SIDE OF CUBE */
+        .face6 {
+            transform: rotateX(90deg) translateZ(200px);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class='aquarium'>
+        <div class='face1'>
+            <img src='../images/Aquarium_1.jpg' alt='face1' />
+        </div>
+        <div class='face2'>
+            <img src='../images/Aquarium_2.jpg' alt='face2' />
+        </div>
+        <div class='face3'>
+            <img src='../images/Aquarium_3.jpg' alt='face3' />
+        </div>
+        <div class='face4'>
+            <img src='../images/Aquarium_4.jpg' alt='face4' />
+        </div>
+        <div class='face5'>
+            <img src='../images/Aquarium_5.jpg' alt='face5' />
+        </div>
+        <div class='face6'>
+            <img src='../images/Aquarium_6.jpg' alt='face6' />
+        </div>
+    </div>
+</body>
+
+</html>

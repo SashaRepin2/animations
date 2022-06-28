@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg width="900" height="600">
+        <polygon points="400 , 400 60, 480 230, 190" fill="blue">
+            <animateTransform id='anim1' attributeName="transform" begin='mousemove; anim2.end; click' type="rotate"
+                from="0 230 370" to="360 230 370" dur="0.3s" />
+        </polygon>
+        <polygon points="860, 480 520, 480 690, 190" fill="green">
+            <animateTransform id="anim2" attributeName="transform" type="rotate" from="0 690 370" to="360 690 370"
+                begin="mousedown" dur="0.3s" />
+        </polygon>
+    </svg>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg width='800' height='600'>
+        <rect id='reactangle' x='400' y='200' width='100' height='100' fill='rgb(0,102,118)'>
+            <animate attributeName='x' begin='0s' dur='3s' from='0' to='0' />
+            <animate attributeName='y' begin='0s' dur='3s' from='200' to=0 />
+        </rect>
+    </svg>
+    <svg width='800' height='600'>
+        <rect id='reactangle' x='400' y='200' width='100' height='100' fill='rgb(0,102,118)'>
+            <animateMotion path='M 0 0 L -400 -200' begin='0s' dur='3s' fill='freeze' />
+            <animateMotion path='M-400 -200 A400 200 0 0 1 0 0' begin='3s' dur='6s' fill='freeze' />
+        </rect>
+    </svg>
+
+    <svg width='800' height='600'>
+        <image id='tsImg' xlink:href='../images/testImage.jpg' x='0' y='0' width='650' height='374'>
+            <animateTransform attributeName='transform' type='scale' begin='2' dur='3' values='1; 0.4; 1.2; 1' />
+
+            <animateTransform attributeName='transform' type='skewY' begin='6' dur='3' values='0; 20; 0' />
+
+            <animateTransform attributeName='transform' type='rotate' begin=10 dur=3 fill='freeze'
+                values='0 325 187; 180 325 187' />
+        </image>
+    </svg>
+
+
+    <svg width='800' height='600'>
+        <circle id='circle1' cx='400' cy='300' r='200' stroke-width='100' stroke-dasharray='15 15' stroke='blue'
+            fill='none'>
+            <animateTransform attributeName='transform' type='rotate' begin='1s' dur='10s' from='0 400 300'
+                to='360 400 300' />
+        </circle>
+        <circle id="circle2" cx="400" cy="300" r="100" fill="none" stroke="green" stroke-width="70"
+            stroke-dasharray="15 15">
+            <animateTransform attributeName="transform" type="rotate" begin="1s" dur="10s" from="0 400 300"
+                to="-720 400 300" />
+
+        </circle>
+        <!-- Does not work, removed from chrome (81 and later) -->
+        <discard begin="5s" />
+    </svg>
+
+
+    <svg width='800' height='600'>
+        <circle id='circle3' cx='400' cy='300' r='200' stroke-width='100' stroke-dasharray='15 15' stroke='blue'
+            fill='none'>
+            <animateTransform attributeName='transform' type='rotate' begin='1s' dur='10s' from='0 400 300'
+                to='360 400 300' />
+        </circle>
+        <circle id="circle4" cx="400" cy="300" r="100" fill="none" stroke="green" stroke-width="70"
+            stroke-dasharray="15 15">
+            <animateTransform attributeName="transform" type="rotate" begin="1s" dur="10s" from="0 400 300"
+                to="-720 400 300" />
+            <set attributeName="stroke" to="red" begin='5s' dur='3s' />
+        </circle>
+    </svg>
+
+</body>
+
+</html>

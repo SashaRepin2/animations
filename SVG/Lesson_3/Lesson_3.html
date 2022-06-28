@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg>
+        <g fill="none" stroke="blue" stroke-width="1" stroke-dasharray="0 1114">
+            <path d="M83.9,49h">
+                <animate attributeName="stroke-dasharray" begin="1s" dur="7s" calcMode="discrete" fill="freeze"
+                    values="0 1114; 75 500; 150 135; 24 24; 1114 0" keyTimes="0; 0.1; 0.3; 0.5; 1" />
+            </path>
+        </g>
+    </svg>
+
+    <svg width="800" height="600">
+        <line x1="10" y1="300" x2='400' y2="300" stroke-width="5" stroke='black'>
+            <animate attributeName="y1" from="0" to='100' dur='2s' additive='sum' accumulate="sum" repeatCount="3">
+        </line>
+    </svg>
+</body>
+
+</html>
